@@ -62,8 +62,8 @@ N -330 -100 -330 -10 {lab=Dn}
 N -330 -110 -330 -100 {lab=Dn}
 N -330 -140 -300 -140 {lab=Dn}
 N -330 -140 -330 -110 {lab=Dn}
-C {/foss/designs/schDesigns/xorgate/xorgate.sym} -210 -30 0 0 {name=x2}
-C {/foss/designs/schDesigns/andgate/andgate.sym} -210 170 0 0 {name=x3}
+C {blocks/schDesigns/xorgate/xorgate.sym} -210 -30 0 0 {name=x2}
+C {blocks/schDesigns/andgate/andgate.sym} -210 170 0 0 {name=x3}
 C {lab_wire.sym} -190 60 0 1 {name=p7 sig_type=std_logic lab=vss
 }
 C {lab_wire.sym} -190 260 0 1 {name=p1 sig_type=std_logic lab=vss
@@ -81,5 +81,5 @@ C {iopin.sym} -90 170 0 0 {name=p9 lab=Sout}
 C {iopin.sym} -360 60 0 1 {name=p10 lab=vss}
 C {iopin.sym} -360 -50 0 1 {name=p11 lab=CE}
 C {iopin.sym} -360 -120 0 1 {name=p12 lab=vdd}
-C {/foss/designs/schDesigns/dff2c/dff2c.sym} 10 50 0 0 {name=x1}
+C {blocks/schDesigns/dff2c/dff2c.sym} 10 50 0 0 {name=x1}
 C {iopin.sym} 90 50 0 0 {name=p13 lab=CLK2}

@@ -68,7 +68,7 @@ C {lab_wire.sym} -80 -20 2 1 {name=p12 sig_type=std_logic lab=avdd1p8
 C {lab_wire.sym} -30 60 2 1 {name=p13 sig_type=std_logic lab=clk2_sig}
 C {lab_wire.sym} 30 60 2 0 {name=p14 sig_type=std_logic lab=avss1p8
 }
-C {/foss/designs/schDesigns/count4bits_2c/count4bits_2c.sym} 0 0 0 0 {name=x1}
+C {blocks/schDesigns/count4bits_2c/count4bits_2c.sym} 0 0 0 0 {name=x1}
 C {lab_wire.sym} -80 20 0 0 {name=p15 sig_type=std_logic lab=clk1_sig}
 C {vsource.sym} 375 -155 0 0 {name=V7 value="PULSE(\{vdd\} 0 \{Tclk/8\} 1p 1p \{Tclk/4\} \{Tclk/2\}) DC 0 AC 0" savecurrent=false}
 C {lab_wire.sym} 375 -95 0 0 {name=p16 sig_type=std_logic lab=avss1p8

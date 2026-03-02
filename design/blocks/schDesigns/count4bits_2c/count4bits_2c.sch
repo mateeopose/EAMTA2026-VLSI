@@ -64,8 +64,8 @@ C {iopin.sym} 150 150 0 0 {name=p6 lab=01}
 C {iopin.sym} 150 50 0 0 {name=p7 lab=CLR}
 C {iopin.sym} 150 290 0 0 {name=p8 lab=10}
 C {iopin.sym} 150 430 0 0 {name=p9 lab=11}
-C {/foss/designs/schDesigns/count1bit_2c/count1bit_2c.sym} 0 -10 0 0 {name=x1}
-C {/foss/designs/schDesigns/count1bit_2c/count1bit_2c.sym} 0 130 0 0 {name=x2}
-C {/foss/designs/schDesigns/count1bit_2c/count1bit_2c.sym} 0 270 0 0 {name=x3}
-C {/foss/designs/schDesigns/count1bit_2c/count1bit_2c.sym} 0 410 0 0 {name=x4}
+C {blocks/schDesigns/count1bit_2c/count1bit_2c.sym} 0 -10 0 0 {name=x1}
+C {blocks/schDesigns/count1bit_2c/count1bit_2c.sym} 0 130 0 0 {name=x2}
+C {blocks/schDesigns/count1bit_2c/count1bit_2c.sym} 0 270 0 0 {name=x3}
+C {blocks/schDesigns/count1bit_2c/count1bit_2c.sym} 0 410 0 0 {name=x4}
 C {iopin.sym} -160 -70 2 0 {name=p10 lab=CE}

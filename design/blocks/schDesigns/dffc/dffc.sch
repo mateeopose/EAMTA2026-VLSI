@@ -103,15 +103,15 @@ N -220 500 -50 500 {lab=vss}
 N 20 430 50 430 {lab=#net5}
 N -50 380 -50 381 {lab=vdd}
 N -50 479 -50 480 {lab=vss}
-C {/foss/designs/schDesigns/transmissiongate/transmissiongate.sym} -10 -20 0 0 {name=x1}
-C {/foss/designs/schDesigns/transmissiongate/transmissiongate.sym} 590 -20 0 0 {name=x2}
-C {/foss/designs/schDesigns/transmissiongate/transmissiongate.sym} -290 240 0 1 {name=x3}
-C {/foss/designs/schDesigns/transmissiongate/transmissiongate.sym} 450 300 0 1 {name=x4}
-C {/foss/designs/schDesigns/norgate/norgate.sym} 110 220 0 1 {name=x5}
-C {/foss/designs/schDesigns/norgate/norgate.sym} 860 -20 0 0 {name=x6}
-C {/foss/designs/schDesigns/inverter/inverter.sym} -220 430 0 0 {name=x7}
-C {/foss/designs/schDesigns/inverter/inverter.sym} 240 -40 0 0 {name=x8}
-C {/foss/designs/schDesigns/inverter/inverter.sym} 860 280 0 1 {name=x9}
+C {blocks/schDesigns/transmissiongate/transmissiongate.sym} -10 -20 0 0 {name=x1}
+C {blocks/schDesigns/transmissiongate/transmissiongate.sym} 590 -20 0 0 {name=x2}
+C {blocks/schDesigns/transmissiongate/transmissiongate.sym} -290 240 0 1 {name=x3}
+C {blocks/schDesigns/transmissiongate/transmissiongate.sym} 450 300 0 1 {name=x4}
+C {blocks/schDesigns/norgate/norgate.sym} 110 220 0 1 {name=x5}
+C {blocks/schDesigns/norgate/norgate.sym} 860 -20 0 0 {name=x6}
+C {blocks/schDesigns/inverter/inverter.sym} -220 430 0 0 {name=x7}
+C {blocks/schDesigns/inverter/inverter.sym} 240 -40 0 0 {name=x8}
+C {blocks/schDesigns/inverter/inverter.sym} 860 280 0 1 {name=x9}
 C {iopin.sym} -210 -40 2 0 {name=p1 lab=D}
 C {iopin.sym} 1040 -20 0 0 {name=p2 lab=Q}
 C {iopin.sym} 880 390 0 0 {name=p3 lab=Qb}
@@ -144,5 +144,5 @@ C {lab_pin.sym} 500 -140 0 0 {name=p29 sig_type=std_logic lab=clk_pos}
 C {lab_pin.sym} 540 380 0 1 {name=p31 sig_type=std_logic lab=clk_pos}
 C {iopin.sym} -240 360 2 0 {name=p4 lab=vdd}
 C {iopin.sym} -240 500 2 0 {name=p5 lab=vss}
-C {/foss/designs/schDesigns/inverter/inverter.sym} -50 430 0 0 {name=x10}
+C {blocks/schDesigns/inverter/inverter.sym} -50 430 0 0 {name=x10}
 C {lab_pin.sym} 50 430 2 0 {name=p16 sig_type=std_logic lab=clk_pos}

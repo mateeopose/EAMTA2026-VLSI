@@ -10,7 +10,7 @@ N 185 -60 185 -30 {lab=avss1p8}
 N 185 30 185 60 {lab=GND}
 N 375 -60 375 -30 {lab=clk_sig}
 N 375 30 375 60 {lab=avss1p8}
-C {/foss/designs/schDesigns/count4bits/count4bits.sym} 0 0 0 0 {name=x1}
+C {blocks/schDesigns/count4bits/count4bits.sym} 0 0 0 0 {name=x1}
 C {netlist_not_shown.sym} -275 -50 0 0 {name=SIMULATION only_toplevel=false
 value="
 * Circuit Parameters

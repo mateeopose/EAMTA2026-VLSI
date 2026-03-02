@@ -57,16 +57,16 @@ N 80 430 150 430 {lab=11}
 N 80 290 150 290 {lab=10}
 N 40 470 120 470 {lab=CLR}
 N 120 330 120 470 {lab=CLR}
-C {/foss/designs/schDesigns/count1bit/count1bit.sym} 0 -10 0 0 {name=x1}
+C {blocks/schDesigns/count1bit/count1bit.sym} 0 -10 0 0 {name=x1}
 C {iopin.sym} -160 10 2 0 {name=p1 lab=CE}
 C {iopin.sym} -160 -30 2 0 {name=p2 lab=vdd}
 C {iopin.sym} 150 -30 0 0 {name=p3 lab=vss}
-C {/foss/designs/schDesigns/count1bit/count1bit.sym} 0 130 0 0 {name=x2}
+C {blocks/schDesigns/count1bit/count1bit.sym} 0 130 0 0 {name=x2}
 C {iopin.sym} -160 50 2 0 {name=p4 lab=CLK}
 C {iopin.sym} 150 10 0 0 {name=p5 lab=00}
 C {iopin.sym} 150 150 0 0 {name=p6 lab=01}
 C {iopin.sym} 150 50 0 0 {name=p7 lab=CLR}
-C {/foss/designs/schDesigns/count1bit/count1bit.sym} 0 270 0 0 {name=x3}
-C {/foss/designs/schDesigns/count1bit/count1bit.sym} 0 410 0 0 {name=x4}
+C {blocks/schDesigns/count1bit/count1bit.sym} 0 270 0 0 {name=x3}
+C {blocks/schDesigns/count1bit/count1bit.sym} 0 410 0 0 {name=x4}
 C {iopin.sym} 150 290 0 0 {name=p8 lab=10}
 C {iopin.sym} 150 430 0 0 {name=p9 lab=11}

@@ -4,7 +4,7 @@
 
 name:           norgate
 description:    2-input NOR gate implementing Y = NOT(A OR B)
-PDK:            sky130A
+PDK:            ihp-sg13g2
 
 cace_format:    5.2
 
@@ -43,8 +43,8 @@ pins:
     description: Digital power supply
     type: power
     direction: inout
-    Vmin: 1.62
-    Vmax: 1.98
+    Vmin: 1.08
+    Vmax: 1.32
   vss:
     description: Digital ground
     type: ground
@@ -57,7 +57,7 @@ default_conditions:
     description: Supply voltage
     display: VDD
     unit: V
-    typical: 1.8
+    typical: 1.2
   temperature:
     description: Ambient temperature
     display: Temp

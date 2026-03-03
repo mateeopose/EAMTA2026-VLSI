@@ -1,22 +1,18 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N -100 -30 -80 -30 {lab=vdd}
 N 80 -30 100 -30 {lab=vss}
-N -120 -30 -100 -30 {lab=vdd}
-N 100 -30 120 -30 {lab=vss}
-N -150 10 -80 10 {lab=CE}
+N 100 -30 150 -30 {lab=vss}
 N -100 -30 -100 110 {lab=vdd}
 N 100 -30 100 110 {lab=vss}
-N -150 -30 -120 -30 {lab=vdd}
 N 80 110 100 110 {lab=vss}
 N -100 110 -80 110 {lab=vdd}
-N -150 50 -40 50 {lab=CLK}
-N 120 -30 140 -30 {lab=vss}
-N 140 -30 150 -30 {lab=vss}
+N -140 50 -40 50 {lab=CLK}
 N 80 10 150 10 {lab=00}
 N 80 150 150 150 {lab=01}
 N 0 50 0 70 {lab=#net1}
@@ -25,10 +21,10 @@ N -120 70 -120 150 {lab=#net1}
 N -120 150 -80 150 {lab=#net1}
 N -140 50 -140 190 {lab=CLK}
 N -140 190 -40 190 {lab=CLK}
-N -160 50 -150 50 {lab=CLK}
-N -160 10 -150 10 {lab=CE}
-N -160 -30 -150 -30 {lab=vdd}
-N 40 50 150 50 {lab=CLR}
+N -160 50 -140 50 {lab=CLK}
+N -160 10 -80 10 {lab=CE}
+N -160 -30 -100 -30 {lab=vdd}
+N 120 50 150 50 {lab=CLR}
 N 120 50 120 190 {lab=CLR}
 N 40 190 120 190 {lab=CLR}
 N -0 190 -0 210 {lab=#net2}
@@ -57,6 +53,7 @@ N 80 430 150 430 {lab=11}
 N 80 290 150 290 {lab=10}
 N 40 470 120 470 {lab=CLR}
 N 120 330 120 470 {lab=CLR}
+N 40 50 120 50 {lab=CLR}
 C {blocks/count1bit/schematic/count1bit.sym} 0 -10 0 0 {name=x1}
 C {iopin.sym} -160 10 2 0 {name=p1 lab=CE}
 C {iopin.sym} -160 -30 2 0 {name=p2 lab=vdd}

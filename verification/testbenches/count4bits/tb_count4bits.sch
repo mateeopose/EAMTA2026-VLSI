@@ -1,8 +1,9 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N 285 30 285 60 {lab=avss1p8}
 N 285 -60 285 -30 {lab=avdd1p8}
@@ -10,7 +11,7 @@ N 185 -60 185 -30 {lab=avss1p8}
 N 185 30 185 60 {lab=GND}
 N 375 -60 375 -30 {lab=clk_sig}
 N 375 30 375 60 {lab=avss1p8}
-C {blocks/count4bits/schematic/count4bits.sym} 0 0 0 0 {name=x1}
+C {top/schematic/count4bits.sym} 0 0 0 0 {name=x1}
 C {netlist_not_shown.sym} -275 -50 0 0 {name=SIMULATION only_toplevel=false
 value="
 * Circuit Parameters
@@ -19,7 +20,7 @@ value="
 .param Tclk = 10n
 .options TEMP = 27.0
 * Include Models - IHP SG13G2
-.lib $PDK_ROOT/sg13g2/libs.tech/ngspice/models/sg13_lv_models.lib typical
+.lib cornerMOSlv.lib mos_tt
 * OP Parameters & Singals to save
 .save all
 *Simulations

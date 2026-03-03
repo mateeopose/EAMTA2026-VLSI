@@ -6,14 +6,33 @@
 ###########################################################################
 #### Get the project root directory
 set SCRIPT_DIR [file dirname [file normalize [info script]]]
+set LOCAL_PDK_ROOT $SCRIPT_DIR/IHP-Open-PDK
 
-#### Set PDK paths as ENVIRONMENT VARIABLES so the sourced script sees them
-set env(PDK_ROOT) $SCRIPT_DIR/IHP-Open-PDK
-set env(PDK) ihp-sg13g2
+#### Prefer externally provided PDK vars (e.g. distrobox /foss/pdks),
+#### then fallback to the local IHP-Open-PDK submodule.
+if {[info exists env(PDK)] && $env(PDK) ne {}} {
+    set PDK $env(PDK)
+} else {
+    set PDK ihp-sg13g2
+    set env(PDK) $PDK
+}
+
+if {[info exists env(PDK_ROOT)] && $env(PDK_ROOT) ne {} && \
+    [file exists $env(PDK_ROOT)/$PDK/libs.tech/xschem/xschemrc]} {
+    set PDK_ROOT $env(PDK_ROOT)
+} elseif {[file exists $LOCAL_PDK_ROOT/$PDK/libs.tech/xschem/xschemrc]} {
+    set PDK_ROOT $LOCAL_PDK_ROOT
+    set env(PDK_ROOT) $PDK_ROOT
+} else {
+    puts "ERROR: Could not find IHP-Open-PDK for PDK '$PDK'."
+    puts "Checked env(PDK_ROOT) and local submodule at $LOCAL_PDK_ROOT"
+    puts "If using iic-osic-tools2, ensure: export PDK_ROOT=/foss/pdks"
+    exit 1
+}
 
 #### Keep local Tcl vars for our own use below (optional but convenient)
-set PDK_ROOT $env(PDK_ROOT)
-set PDK $env(PDK)
+set env(PDK_ROOT) $PDK_ROOT
+set env(PDK) $PDK
 
 #### Check if submodule is initialized
 if {![file exists $PDK_ROOT/$PDK/libs.tech/xschem/xschemrc]} {

@@ -67,7 +67,15 @@ install_packages() {
 # 2. Create distrobox (first run only)
 # ─────────────────────────────────────────────────────────────────────────────
 create_distrobox() {
-    if [ -f "$SETUP_FLAG" ]; then return; fi
+    # distrobox list output: "ID | NAME | STATUS | IMAGE" (pipe-separated, NR=1 is header)
+    local box_exists=false
+    if distrobox list 2>/dev/null | awk -F'|' 'NR>1 {gsub(/^ +| +$/,"",$2); print $2}' | grep -qxF "$DISTROBOX_NAME"; then
+        box_exists=true
+    fi
+
+    if [ -f "$SETUP_FLAG" ] && [ "$box_exists" = true ]; then
+        return
+    fi
 
     msg "Creating distrobox '$DISTROBOX_NAME' (this may take a while on the first run)..."
     distrobox create -n "$DISTROBOX_NAME" \

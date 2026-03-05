@@ -177,7 +177,9 @@ fi
 
 # ── Start SSH agent and go to repo ──────────────────────────────────────
 eval "$(ssh-agent -s)" >/dev/null
-ssh-add ~/.ssh/id_ed25519 2>/dev/null
+if [ -f ~/.ssh/id_ed25519 ]; then
+    ssh-add ~/.ssh/id_ed25519 2>/dev/null || true
+fi
 
 if [ -d "EAMTA2026-VLSI" ]; then
     cd EAMTA2026-VLSI

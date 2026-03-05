@@ -16,7 +16,7 @@ This guide will help you set up the development environment for the 4-bit counte
 
 This section provides single commands to install dependencies, clone the repository, and run the setup script without requiring user interaction during the process.
 
-**⚠️ IMPORTANT:** The automated installation skips the interactive SSH key generation prompts. You will still need to **manually add your generated SSH key to GitHub** (see Step 2 below) to be able to push your assigned block!
+**⚠️ IMPORTANT:** The automated installation generates an SSH key automatically (no prompts required). You will still need to **manually add your generated SSH key to GitHub** (see Step 2 below) to be able to push your assigned block!
 
 #### Windows (PowerShell)
 
@@ -52,7 +52,7 @@ If you prefer to run the steps manually:
 1. Start Ubuntu WSL by running `wsl` on PowerShell (or just open your terminal on Linux).
 2. Clone the repo: `git clone https://github.com/Fundacion-Fulgor/EAMTA2026-VLSI.git`
 3. Enter the directory: `cd EAMTA2026-VLSI`
-4. Run the setup script: `./setup.sh`. When prompted, provide your email to generate the SSH key and follow the on-screen instructions to add it to GitHub.
+4. Run the setup script: `./setup.sh`. An SSH key will be generated automatically and displayed at the end — follow the on-screen instructions to add it to GitHub.
 
 ## Working with the PDK
 

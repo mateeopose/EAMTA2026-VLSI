@@ -1,0 +1,6 @@
+** sch_path: /foss/designs/EAMTA2026-VLSI/design/blocks/inversor/inversor.sch
+**.subckt inversor
+XM3 net2 net1 net3 net3 sg13_lv_pmos w=0.15u l=0.13u ng=1
+XM1 net2 net1 net4 net4 sg13_lv_nmos w=0.15u l=0.13u ng=1
+**.ends
+.end

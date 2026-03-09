@@ -5,26 +5,28 @@ V {}
 S {}
 F {}
 E {}
-N 380 1190 460 1190 {lab=#net1}
-N 580 1190 580 1250 {lab=#net2}
-N 530 1190 580 1190 {lab=#net2}
-N 480 1040 700 1040 {lab=#net3}
-N 330 1210 330 1350 {lab=#net4}
-N 330 1350 480 1350 {lab=#net4}
-N 480 1210 480 1350 {lab=#net4}
-N 480 1350 580 1350 {lab=#net4}
-N 580 1310 580 1350 {lab=#net4}
-N 580 1350 700 1350 {lab=#net4}
-N 700 1100 700 1350 {lab=#net4}
-N 480 1040 480 1170 {lab=#net3}
-N 330 1040 480 1040 {lab=#net3}
-N 330 1040 330 1170 {lab=#net3}
-N 800 1000 800 1040 {lab=#net5}
-N 210 1190 310 1190 {lab=#net5}
-N 700 1350 800 1350 {lab=#net4}
-N 800 1100 800 1350 {lab=#net4}
-N 210 1000 800 1000 {lab=#net5}
-N 210 1000 210 1190 {lab=#net5}
+N 410 1190 460 1190 {lab=vout}
+N 580 1190 580 1250 {lab=#net1}
+N 530 1190 580 1190 {lab=#net1}
+N 480 1040 700 1040 {lab=#net2}
+N 330 1210 330 1350 {lab=#net3}
+N 330 1350 480 1350 {lab=#net3}
+N 480 1210 480 1350 {lab=#net3}
+N 480 1350 580 1350 {lab=#net3}
+N 580 1310 580 1350 {lab=#net3}
+N 580 1350 700 1350 {lab=#net3}
+N 700 1100 700 1350 {lab=#net3}
+N 480 1040 480 1170 {lab=#net2}
+N 330 1040 480 1040 {lab=#net2}
+N 330 1040 330 1170 {lab=#net2}
+N 800 1000 800 1040 {lab=vin}
+N 210 1190 310 1190 {lab=vin}
+N 700 1350 800 1350 {lab=#net3}
+N 800 1100 800 1350 {lab=#net3}
+N 210 1000 800 1000 {lab=vin}
+N 210 1000 210 1190 {lab=vin}
+N 410 1190 410 1220 {lab=vout}
+N 380 1190 410 1190 {lab=vout}
 C {blocks/inversor/schematic/inversor.sym} 280 1190 0 0 {name=x1}
 C {blocks/inversor/schematic/inversor.sym} 430 1190 0 0 {name=x2}
 C {vsource.sym} 330 1380 0 0 {name=V4 value=DC\{Vss\} savecurrent=false}
@@ -60,3 +62,6 @@ write dcsweep.raw
 .endc
 .end
 "}
+C {lab_pin.sym} 210 1000 0 0 {name=p1 sig_type=std_logic lab=vin}
+C {lab_pin.sym} 410 1220 0 0 {name=p2 sig_type=std_logic lab=vout
+}

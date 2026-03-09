@@ -1,11 +1,11 @@
 ** sch_path: /foss/designs/EAMTA2026-VLSI/verification/testbenches/tb_inversor.sch
 **.subckt tb_inversor
-x1 net3 net1 net5 net4 inversor
-x2 net3 net2 net1 net4 inversor
-V4 net4 0 DC{Vss}
-V5 net3 net4 DC{Vdd}
-V6 net5 net4 PULSE({Vdd} 0 0.0 1p 1p {Tclk/4} {Tclk/2}) DC 0 AC 0
-C1 net2 net4 1p
+x1 net2 vout vin net3 inversor
+x2 net2 net1 vout net3 inversor
+V4 net3 0 DC{Vss}
+V5 net2 net3 DC{Vdd}
+V6 vin net3 PULSE({Vdd} 0 0.0 1p 1p {Tclk/4} {Tclk/2}) DC 0 AC 0
+C1 net1 net3 1p
 **** begin user architecture code
 
 

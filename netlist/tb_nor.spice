@@ -1,0 +1,53 @@
+** sch_path: /foss/designs/EAMTA2026-VLSI/verification/testbenches/tb_nor.sch
+**.subckt tb_nor
+V5 net1 0 DC{Vdd}
+V6 vin2 0 PULSE({Vdd} 0 0.0 1p 1p {Tclk/4} {Tclk/2}) DC 0 AC 0
+V1 vin 0 PULSE({Vdd} 0 0.0 1p 1p {Tclk/2} {Tclk}) DC 0 AC 0
+C1 vout 0 1p
+x1 net1 vin vout vin2 0 nor
+**** begin user architecture code
+
+
+* Circuit Parameters
+.param Vdd = 1.2
+.param Tclk = 20n
+.options TEMP = 27.0
+* Include Models - IHP SG13G2
+.lib cornerMOSlv.lib mos_tt
+* OP Parameters & Singals to save
+.save all
+*Simulations
+.control
+tran 0.01u 100n
+setplot tran1
+plot v(vin) v(vin2)+1.2 v(vout)+2.4
+reset
+dc V6 0 1.2 0.01
+dc V1 0 1.2 0.01
+setplot dc
+plot vin vout ylabel vout xlabel vin
+set filetype = ascii
+write dcsweep.raw
+.endc
+.end
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  blocks/nor/schematic/nor.sym # of pins=5
+** sym_path: /foss/designs/EAMTA2026-VLSI/design/blocks/nor/schematic/nor.sym
+** sch_path: /foss/designs/EAMTA2026-VLSI/design/blocks/nor/schematic/nor.sch
+.subckt nor Vdd A Z B gnd
+*.iopin A
+*.iopin B
+*.iopin Vdd
+*.iopin Z
+*.iopin gnd
+XM2 gnd A Z gnd sg13_lv_nmos w=1.5u l=0.15u ng=1
+XM3 Z B gnd gnd sg13_lv_nmos w=1.5u l=0.15u ng=1
+XM0 Z B net1 Vdd sg13_lv_pmos w=1.5u l=0.15u ng=1
+XM1 Vdd A net1 Vdd sg13_lv_pmos w=1.5u l=0.15u ng=1
+.ends
+
+.end
